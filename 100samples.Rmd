@@ -1,0 +1,32 @@
+---
+title: "100 Samples"
+author: "Tudor Andrei Jumuga"
+date: "9/20/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Let's sample 100 values from a log-normal distribution:
+
+```{r}
+x <- rlnorm(100, meanlog = 1, sdlog = .25)
+par(mfrow = c(1,2))
+hist(x)
+hist(log(x))
+
+```
+
+
+The mean is:
+```{r}
+mean(x)
+```
+
+The variance is:
+```{r}
+var(x)
+```
+
