@@ -16,7 +16,7 @@ x <- rlnorm(100, meanlog = 1, sdlog = .25)
 par(mfrow = c(1,2))
 hist(x)
 hist(log(x))
-
+lx <- log(x)
 ```
 
 
@@ -28,5 +28,17 @@ mean(x)
 The variance is:
 ```{r}
 var(x)
+```
+
+The mean of the log-transformed distribution is:
+
+```{r}
+mean(lx)
+```
+
+The variance of the log-transformed distribution is:
+
+```{r}
+var(lx)
 ```
 
